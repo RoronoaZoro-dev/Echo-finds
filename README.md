@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🌱 EcoFinds - Sustainable Marketplace
 
 EcoFinds is a revolutionary eco-friendly marketplace that promotes sustainability through second-hand goods trading. Built with React and Firebase, it provides a platform for environmentally conscious buyers and sellers to connect while reducing waste and promoting circular economy principles.
@@ -49,3 +50,7 @@ EcoFinds is a reliable JavaScript-based marketplace developed in React and Fireb
   2. Run npm install.
   3. Config the BackEnd FireBase Change the values in src/firebase/config.js to suit your firebase console project api key values.
   4. Run npm start to spin the up the local dev server port 3000.(http://localhost:3000).
+=======
+# Echo-finds
+Echo-Finds is an eco-friendly second-hand marketplace where users can buy, sell, and exchange pre-loved items, promoting sustainability and reducing waste.
+>>>>>>> a300ea3b3bdaab6c89e2c66a131eb9fff273d300
