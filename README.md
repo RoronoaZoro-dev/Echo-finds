@@ -34,6 +34,18 @@ EcoFinds provides a platform where users can:
 
 EcoFinds is a reliable JavaScript-based marketplace developed in React and Firebase with mobile responsive design and a focus on sustainability.
 
+# Eco-Finds
+
+This project is deployed on Firebase Hosting.  
+You can view it live here: [Eco-Finds Live Site](https://eco-finds-bb9cd.web.app/)
+
+## Repository Setup
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/RoronoaZoro-dev/Echo-finds.git
+   cd ecofind
+
  ## 🎥 Project Demo
 
 Here is a short video demonstrating the features and functionality of the application.-**[Watch the Project Demo Video](https://drive.google.com/file/d/1kvL394vLk7Cpxp7E7BgQIx7T5sI3uzjP/view?usp=drivesdk)** 
