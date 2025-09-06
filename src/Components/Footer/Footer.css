@@ -1,0 +1,87 @@
+.footerParentDiv {
+  width: 100vw;
+  position: relative;
+}
+.footerParentDiv .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ebeeef;
+  padding: 16px;
+}
+
+.footerParentDiv .content .heading {
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+.footerParentDiv .content .list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerParentDiv .content .list li {
+  cursor: pointer;
+  padding: 4px 0;
+  transition: color 0.3s ease;
+  color: #002f34;
+}
+
+.footerParentDiv .content .list li:hover {
+  color: #00a651;
+  font-weight: 500;
+}
+
+.description-tooltip {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  border: 2px solid #00a651;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.description-tooltip h4 {
+  margin: 0 0 10px 0;
+  color: #002f34;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.description-tooltip p {
+  margin: 0;
+  color: #666;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.footerParentDiv .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: #002f34;
+  color: whitesmoke;
+}
+
+.footerParentDiv .footer p {
+  margin: 0;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Favicon</title>
+</head>
+<body>
+    <canvas id="canvas" width="32" height="32" style="border: 1px solid #ccc;"></canvas>
+    <br><br>
+    <button onclick="downloadFavicon()">Download 32x32 PNG</button>
+    <button onclick="downloadFavicon16()">Download 16x16 PNG</button>
+    <button onclick="downloadApple()">Download Apple Touch Icon</button>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Draw green circle background
+        ctx.fillStyle = '#2E7D32';
+        ctx.beginPath();
+        ctx.arc(16, 16, 16, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        // Draw white leaf
+        ctx.fillStyle = 'white';
+        ctx.beginPath();
+        ctx.arc(16, 12, 6, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        // Add leaf details
+        ctx.fillStyle = '#2E7D32';
+        ctx.beginPath();
+        ctx.arc(16, 12, 3, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        function downloadFavicon() {
+            const link = document.createElement('a');
+            link.download = 'favicon-32x32.png';
+            link.href = canvas.toDataURL();
+            link.click();
+        }
+        
+        function downloadFavicon16() {
+            const canvas16 = document.createElement('canvas');
+            canvas16.width = 16;
+            canvas16.height = 16;
+            const ctx16 = canvas16.getContext('2d');
+            
+            // Draw green circle background
+            ctx16.fillStyle = '#2E7D32';
+            ctx16.beginPath();
+            ctx16.arc(8, 8, 8, 0, 2 * Math.PI);
+            ctx16.fill();
+            
+            // Draw white leaf
+            ctx16.fillStyle = 'white';
+            ctx16.beginPath();
+            ctx16.arc(8, 6, 3, 0, 2 * Math.PI);
+            ctx16.fill();
+            
+            const link = document.createElement('a');
+            link.download = 'favicon-16x16.png';
+            link.href = canvas16.toDataURL();
+            link.click();
+        }
+        
+        function downloadApple() {
+            const canvas180 = document.createElement('canvas');
+            canvas180.width = 180;
+            canvas180.height = 180;
+            const ctx180 = canvas180.getContext('2d');
+            
+            // Draw green circle background
+            ctx180.fillStyle = '#2E7D32';
+            ctx180.beginPath();
+            ctx180.arc(90, 90, 90, 0, 2 * Math.PI);
+            ctx180.fill();
+            
+            // Draw white leaf
+            ctx180.fillStyle = 'white';
+            ctx180.beginPath();
+            ctx180.arc(90, 70, 30, 0, 2 * Math.PI);
+            ctx180.fill();
+            
+            // Add leaf details
+            ctx180.fillStyle = '#2E7D32';
+            ctx180.beginPath();
+            ctx180.arc(90, 70, 15, 0, 2 * Math.PI);
+            ctx180.fill();
+            
+            const link = document.createElement('a');
+            link.download = 'apple-touch-icon.png';
+            link.href = canvas180.toDataURL();
+            link.click();
+        }
+    </script>
+</body>
+</html>

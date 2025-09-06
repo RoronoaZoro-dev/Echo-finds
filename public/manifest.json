@@ -1,0 +1,26 @@
+{
+  "short_name": "EcoFinds",
+  "name": "EcoFinds - Sustainable Marketplace",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#2E7D32",
+  "background_color": "#E8F5E8",
+  "description": "The sustainable marketplace for second-hand, recycled, and eco-friendly products.",
+  "icons": [
+    {
+      "src": "favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

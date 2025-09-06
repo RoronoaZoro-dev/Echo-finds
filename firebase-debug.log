@@ -1,0 +1,38 @@
+[debug] [2025-09-06T13:23:20.420Z] ----------------------------------------------------------------------
+[debug] [2025-09-06T13:23:20.422Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\lenovo\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2025-09-06T13:23:20.422Z] CLI Version:   14.15.2
+[debug] [2025-09-06T13:23:20.423Z] Platform:      win32
+[debug] [2025-09-06T13:23:20.423Z] Node Version:  v20.19.5
+[debug] [2025-09-06T13:23:20.423Z] Time:          Sat Sep 06 2025 18:53:20 GMT+0530 (India Standard Time)
+[debug] [2025-09-06T13:23:20.423Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-09-06T13:23:20.552Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-09-06T13:23:20.552Z] > authorizing via signed-in user (stanleybro47@gmail.com)
+[debug] [2025-09-06T13:23:20.552Z] [iam] checking project olx-sijeesh for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-09-06T13:23:20.553Z] Checked if tokens are valid: true, expires at: 1757167457782
+[debug] [2025-09-06T13:23:20.553Z] Checked if tokens are valid: true, expires at: 1757167457782
+[debug] [2025-09-06T13:23:20.554Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/olx-sijeesh:testIamPermissions [none]
+[debug] [2025-09-06T13:23:20.554Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/olx-sijeesh:testIamPermissions x-goog-quota-user=projects/olx-sijeesh
+[debug] [2025-09-06T13:23:20.554Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/olx-sijeesh:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-09-06T13:23:22.195Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/olx-sijeesh:testIamPermissions 200
+[debug] [2025-09-06T13:23:22.195Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/olx-sijeesh:testIamPermissions {}
+[debug] [2025-09-06T13:23:22.195Z] [iam] error while checking permissions, command may fail: Authorization failed. This account is missing the following required permissions on project olx-sijeesh:
+
+  datastore.indexes.create
+  datastore.indexes.delete
+  datastore.indexes.list
+  datastore.indexes.update
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2025-09-06T13:23:22.196Z] Checked if tokens are valid: true, expires at: 1757167457782
+[debug] [2025-09-06T13:23:22.196Z] Checked if tokens are valid: true, expires at: 1757167457782
+[debug] [2025-09-06T13:23:22.196Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/olx-sijeesh [none]
+[debug] [2025-09-06T13:23:22.682Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/olx-sijeesh 403
+[debug] [2025-09-06T13:23:22.682Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/olx-sijeesh {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2025-09-06T13:23:22.683Z] Request to https://firebase.googleapis.com/v1beta1/projects/olx-sijeesh had HTTP Error: 403, The caller does not have permission
+[debug] [2025-09-06T13:23:23.048Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects/olx-sijeesh had HTTP Error: 403, The caller does not have permission
+    at responseToError (C:\Users\lenovo\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:52:12)
+    at RetryOperation._fn (C:\Users\lenovo\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:312:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project olx-sijeesh. Please make sure the project exists and your account has permission to access it.

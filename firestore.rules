@@ -1,0 +1,29 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Users can read and write their own user document
+    match /users/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+    
+    // Posts collection - users can read all posts, but only create/update/delete their own
+    match /posts/{postId} {
+      allow read: if true; // Anyone can read posts
+      allow create: if request.auth != null && request.auth.uid == resource.data.userId;
+      allow update, delete: if request.auth != null && request.auth.uid == resource.data.userId;
+    }
+    
+    // Products collection - users can read all products, but only create/update/delete their own
+    match /products/{productId} {
+      allow read: if true; // Anyone can read products
+      allow create: if request.auth != null && request.auth.uid == resource.data.userId;
+      allow update, delete: if request.auth != null && request.auth.uid == resource.data.userId;
+    }
+    
+    // Categories collection - read only for all users
+    match /categories/{categoryId} {
+      allow read: if true;
+      allow write: if false; // Only admins can write (you can modify this later)
+    }
+  }
+}

@@ -1,0 +1,240 @@
+/* EcoFinds - Sustainable Marketplace Styles */
+
+:root {
+  /* EcoFinds Color Palette */
+  --primary-green: #2E7D32;
+  --secondary-green: #4CAF50;
+  --light-green: #A5D6A7;
+  --accent-green: #66BB6A;
+  --background-green: #E8F5E8;
+  --text-dark: #1B5E20;
+  --text-light: #388E3C;
+  --white: #FFFFFF;
+  --gray-light: #F5F5F5;
+  --gray-medium: #E0E0E0;
+  --gray-dark: #757575;
+  --success: #4CAF50;
+  --warning: #FF9800;
+  --error: #F44336;
+  --info: #2196F3;
+}
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-green);
+  color: var(--text-dark);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* EcoFinds Branding */
+.ecofinds-brand {
+  color: var(--primary-green);
+  font-weight: bold;
+}
+
+.ecofinds-logo {
+  color: var(--primary-green);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.ecofinds-logo:hover {
+  color: var(--secondary-green);
+  text-decoration: none;
+}
+
+/* Button Styles */
+.eco-button {
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+  color: var(--white);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.eco-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(46, 125, 50, 0.3);
+  color: var(--white);
+  text-decoration: none;
+}
+
+.eco-button:active {
+  transform: translateY(0);
+}
+
+/* Card Styles */
+.eco-card {
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--gray-medium);
+  transition: all 0.3s ease;
+}
+
+.eco-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Form Styles */
+.eco-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid var(--gray-medium);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: var(--white);
+}
+
+.eco-input:focus {
+  outline: none;
+  border-color: var(--secondary-green);
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+
+.eco-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* Status Indicators */
+.status-approved {
+  background: var(--success);
+  color: var(--white);
+}
+
+.status-pending {
+  background: var(--warning);
+  color: var(--white);
+}
+
+.status-rejected {
+  background: var(--error);
+  color: var(--white);
+}
+
+.status-flagged {
+  background: var(--error);
+  color: var(--white);
+}
+
+/* Eco Rating Styles */
+.eco-rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--text-light);
+  font-weight: 600;
+}
+
+.eco-rating-high {
+  color: var(--success);
+}
+
+.eco-rating-medium {
+  color: var(--warning);
+}
+
+.eco-rating-low {
+  color: var(--error);
+}
+
+/* Loading Spinner */
+.eco-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.eco-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--gray-medium);
+  border-top: 4px solid var(--secondary-green);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .eco-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .eco-card {
+    margin: 10px;
+  }
+}
+
+/* Utility Classes */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.mb-1 { margin-bottom: 0.25rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-3 { margin-bottom: 1rem; }
+.mb-4 { margin-bottom: 1.5rem; }
+.mb-5 { margin-bottom: 3rem; }
+
+.mt-1 { margin-top: 0.25rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-3 { margin-top: 1rem; }
+.mt-4 { margin-top: 1.5rem; }
+.mt-5 { margin-top: 3rem; }
+
+.p-1 { padding: 0.25rem; }
+.p-2 { padding: 0.5rem; }
+.p-3 { padding: 1rem; }
+.p-4 { padding: 1.5rem; }
+.p-5 { padding: 3rem; }
+
+/* Animation Classes */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
