@@ -34,9 +34,7 @@ EcoFinds provides a platform where users can:
 
 EcoFinds is a reliable JavaScript-based marketplace developed in React and Firebase with mobile responsive design and a focus on sustainability.
   
-## Sample images
-![Screenshot from 2021-10-29 10-01-37](https://user-images.githubusercontent.com/91063960/139376405-043d6cfd-93b3-4486-a07a-2ff3382846d8.png)
-![Screenshot from 2021-10-29 10-01-58](https://user-images.githubusercontent.com/91063960/139376440-1dcd424a-6979-4ec7-bfa0-9e9038ddcbd0.png)
+
 ## 🦸 Tech Stack
 
 **Client:** React, Context, CSS
